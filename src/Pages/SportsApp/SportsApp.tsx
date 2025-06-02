@@ -373,7 +373,7 @@ const SportsApp = () => {
                                                                             setTimeout(() => {
                                                                                 setShowModal(false);
                                                                                 setSuccess(false);
-                                                                                window.location.href = "http://localhost:8100/bookinghistory";
+                                                                                window.location.href = "zadsports://open/bookinghistory";
                                                                                 // history.replace("/subscriptionPlans", { refreshPage: true });
                                                                             }, 1000)
                                                                         }
