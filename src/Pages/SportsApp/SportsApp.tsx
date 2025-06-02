@@ -280,7 +280,8 @@ const SportsApp = () => {
                 refBookingStartDate: parsedPayload.refBookingStartDate,
                 refBookingEndDate: parsedPayload.refBookingEndDate,
                 additionalNotes: parsedPayload.additionalNotes,
-                refAddOns: parsedPayload.addOnsVal
+                refAddOns: parsedPayload.refAddOns,
+                transactionId: razor_payment_id
             },
             {
                 headers: {
