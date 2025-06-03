@@ -55,9 +55,14 @@ const SportsApp = () => {
     const fetchData = async () => {
 
 
+        console.log("=====>"+import.meta.env.VITE_API_SPORTS_URL)
+        console.log("=====>"+import.meta.env.VITE_API_SPORTS_ENCRYTION_KEY)
+        console.log("=====>"+import.meta.env.VITE_RZR_API_KEY)
+
+
         try {
             const response = await axios.post(
-                `${import.meta.env.VITE_API_SPORTS_URL}/v1/userRoutes/getconvertedDataAmount`,
+                `https://zadsports-admin.brightoncloudtech.com/api/v1/userRoutes/getconvertedDataAmount`,
                 {
                     tempStorageId: 10,
                 },
@@ -74,7 +79,7 @@ const SportsApp = () => {
             const data = Sportsdecrypt(
                 response.data[1],
                 response.data[0],
-                import.meta.env.VITE_API_SPORTS_ENCRYTION_KEY
+                "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
             );
 
 
@@ -131,7 +136,7 @@ const SportsApp = () => {
 
         if (selectedPaymentMethod === "Credit Card") {
             const options = {
-                key: `${import.meta.env.VITE_RZR_API_KEY}`,
+                key: `rzp_test_GM8j6fnLhVxq8X`,
                 amount: Math.round(amount.totalamount * 100), // Razorpay requires amount in paise
                 currency: "INR",
                 name: "ZadSports",
@@ -164,7 +169,7 @@ const SportsApp = () => {
         }
         else if (selectedPaymentMethod === "Debit Card") {
             const options = {
-                key: `${import.meta.env.VITE_RZR_API_KEY}`,
+                key: `rzp_test_GM8j6fnLhVxq8X`,
                 amount: Math.round(amount.totalamount * 100),
                 currency: "INR",
                 name: "Medpredit",
@@ -199,7 +204,7 @@ const SportsApp = () => {
             razorpay.open();
         } else if (selectedPaymentMethod === "UPI") {
             const options = {
-                key: `${import.meta.env.VITE_RZR_API_KEY}`,
+                key: `rzp_test_GM8j6fnLhVxq8X`,
                 amount: Math.round(amount.totalamount * 100),
                 currency: "INR",
                 name: "Medpredit",
@@ -234,7 +239,7 @@ const SportsApp = () => {
             razorpay.open();
         } else if (selectedPaymentMethod === "Net Banking") {
             const options = {
-                key: `${import.meta.env.VITE_RZR_API_KEY}`,
+                key: `rzp_test_GM8j6fnLhVxq8X`,
                 amount: Math.round(amount.totalamount * 100),
                 currency: "INR",
                 name: "Medpredit",
@@ -272,7 +277,7 @@ const SportsApp = () => {
 
     const sendPayment = async (razor_payment_id: string) => {
         console.log(razor_payment_id);
-        const response = await axios.post(`${import.meta.env.VITE_API_SPORTS_URL}/v1/userRoutes/userGroundBooking`,
+        const response = await axios.post(`https://zadsports-admin.brightoncloudtech.com/api/v1/userRoutes/userGroundBooking`,
             {
                 refGroundId: parsedPayload.refGroundId,
                 isAddonNeeded: parsedPayload.isAddonNeeded,
@@ -294,7 +299,7 @@ const SportsApp = () => {
         const data = Sportsdecrypt(
             response.data[1],
             response.data[0],
-            import.meta.env.VITE_API_SPORTS_ENCRYTION_KEY
+            "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
         );
 
         console.log(data)
