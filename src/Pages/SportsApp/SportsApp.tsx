@@ -54,9 +54,9 @@ const SportsApp = () => {
 
     const fetchData = async () => {
 
-        console.log("===>" + import.meta.env.VITE_API_SPORTS_URL)
-        console.log("===>" + import.meta.env.VITE_API_SPORTS_ENCRYTION_KEY)
-        console.log("===>" + import.meta.env.VITE_RZR_API_KEY)
+        // console.log("===>" + import.meta.env.VITE_API_SPORTS_URL)
+        // console.log("===>" + import.meta.env.VITE_API_SPORTS_ENCRYTION_KEY)
+        // console.log("===>" + import.meta.env.VITE_RZR_API_KEY)
 
         try {
             const response = await axios.post(
