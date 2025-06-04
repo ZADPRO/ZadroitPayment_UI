@@ -170,7 +170,7 @@ const SportsApp = () => {
                 key: `${import.meta.env.VITE_RZR_API_KEY}`,
                 amount: Math.round(amount.totalamount * 100),
                 currency: "INR",
-                name: "Medpredit",
+                name: "ZadSports",
                 description: "Payment for Package",
                 handler: function (response: any) {
                     console.log(response);
@@ -205,7 +205,7 @@ const SportsApp = () => {
                 key: `${import.meta.env.VITE_RZR_API_KEY}`,
                 amount: Math.round(amount.totalamount * 100),
                 currency: "INR",
-                name: "Medpredit",
+                name: "ZadSports",
                 description: "Payment for Package",
                 handler: function (response: any) {
                     console.log(response);
@@ -240,7 +240,7 @@ const SportsApp = () => {
                 key: `${import.meta.env.VITE_RZR_API_KEY}`,
                 amount: Math.round(amount.totalamount * 100),
                 currency: "INR",
-                name: "Medpredit",
+                name: "ZadSports",
                 description: "Payment for Package",
                 handler: function (response: any) {
                     console.log(response);
